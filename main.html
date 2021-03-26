@@ -1,36 +1,133 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Vanguard</title>
+    <style>
+
+        *, *:after, *:before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+         html {
+            -webkit-text-size-adjust: none; 
+            width: 100%;
+            height: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Montserrat', sans-serif;
+        }
+       
+
+        .iframeWrapper {
+            display: none;
+            padding: 10px 0 0px 0;
+            margin: 40px 0 0 0;
+            width: 100%;
+            height: 100%;	
+        }
+
+        .mainFrame {
+           position: absolute;
+           right: 10px;
+        }
+    
+        .wrapper {
+            padding: 0px;
+            margin: 0;
+            width: 100%;
+            height: 100%;	
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;	
+            background-color: black;	
+        } 
+
+       
+
+        .vanguard-icon-wrap{
+            width: 80px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+        .vanguard-icon-wrap.here-note{
+            width: 270px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* .vanguard-icon-wrap img {
+            width: 40px;
+            height: 38px;
+        } */
+
+        .vanguard-icon-wrap .vanguard-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .vanguard-icon-wrap{
+            position: absolute;
+            bottom: 0;
+        }
+
+    </style>
 </head>
 <body>
-    <section class="vh-100">
+
+    <div  id="iframeWrapper" class="container iframeWrapper" style="width: 450px; height: 500px; position: absolute; right: 20px ;">
         <div class="container-fluid h-100 m-0 p-0">
             <div class="row wrapper justify-content-center h-100 m-0 p-0">
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6 fixed sidebar mr-0 pr-0">
-                    <img class="logo" style="width: 50px; margin: auto auto;" src="./image/vi1JZVgr.png" alt="icon">
+                <div class="sidebar col-lg-2 col-md-2 col-sm-3 col-xs-6 mr-0 pr-0" style="border: 1px solid #f6f6f6;">
+                    <img class="icon" style="width: 50px; margin: auto auto;" src="./image/vi1JZVgr.png" alt="icon">
                     <a class="buttons mt-4" href="#Eco">Eco</a>
                     <a class="buttons mt-2" href="#Eco">Eco</a>
                     <a class="buttons mt-2" href="#Eco">Eco</a>
                     <a class="buttons mt-2" href="#Eco">Eco</a>
                 </div>
-                <div class="col-lg-11 col-md-10 col-sm-9 col-xs-6 header h-100 m-0 p-0">
+                <div class="header col-lg-10 col-md-10 col-sm-9 col-xs-6 h-100 m-0 p-0">
                     <ul style="padding-left: 0">
-                        <li>Economy <span class="fa icon p-5">&#xf021;</span><span class="fa icon p-3">&#xf00d;</span></li>
+                        <li>Vanguard <span class="fa refresh p-5">&#xf021;</span><span id="close" class="fa close p-3" onclick="close()">&#xf00d;</span></li>
+                        <iframe id="iframe1" src="https://app.yellowmessenger.com/pwa/mobile/x1603945671724?fullScreen=true" frameborder="0" width="100%" height="440" style="border:none;">
+                        </iframe>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <div class="wrapper m-0 p-0">
+
+        <div class="vanguard-icon-wrap here-note m-0 p-0" id="vanguard-icon-wrapper">
+            <div class="vanguard-icon m-0 p-0">
+                <img class="vanIcon m-0 p-0" style="width: 50px; margin: auto auto;" src="./image/vi1JZVgr.png" alt="icon" onclick="openScreen()">
+            </div>
+        </div>
+    </div>
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+  
+
 </body>
 </html>
