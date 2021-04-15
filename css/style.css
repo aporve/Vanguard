@@ -12,7 +12,7 @@
 
 
 .icon {
-    background: rgb(104, 3, 3);
+    background: #96151d;
     border-radius: 50%;
     border: none;
     color: snow;
@@ -27,11 +27,11 @@
 
 .buttons {
     width: 100%;
-    background: rgb(104, 3, 3);
+    background: #96151d;
     border-radius: 50%;
     border: none;
     color: snow;
-    padding: 20%;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -90,7 +90,7 @@ ul li:hover {
 
 @media (max-width: 576px) {
     .wrapper {flex: 0 0 auto; width: 100%}
-    .sidebar {width: 25%}
+    .sidebar {width: 20%}
     .header {width: 75%}
     /* .buttons {background: blanchedalmond; color: black; width: 2%; } */
 }
