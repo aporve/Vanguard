@@ -90,7 +90,7 @@ ul li:hover {
 
 @media (max-width: 576px) {
     .wrapper {flex: 0 0 auto; width: 100%}
-    .sidebar {width: 20%}
+    .sidebar {width: 25%}
     .header {width: 75%}
     /* .buttons {background: blanchedalmond; color: black; width: 2%; } */
 }
